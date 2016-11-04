@@ -1,4 +1,3 @@
-
 var React = require('react');
 
   //createClass creates a react component for us - there are a couple of different properties we can pass in- one being the render method
@@ -7,9 +6,16 @@ var React = require('react');
     // this means that when the componenet gets rendered to the view the following will display
     render: function(){
       return(
-        <div>
-          Hello Liz
-        </div>
+        <div className="main-container">
+           <nav className="navbar navbar-default" role="navigation">
+             <div className="col-sm-7 col-sm-offset-2" style={{marginTop: 15}}>
+               MENU
+             </div>
+           </nav>
+           <div className="container">
+             {this.props.children}
+           </div>
+         </div>
       )
     }
   });
